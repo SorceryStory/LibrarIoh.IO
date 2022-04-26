@@ -1,0 +1,19 @@
+{
+  "name": "com.sorceressspell.librarioh.io",
+  "displayName": "LibrarIoh.IO",
+  "version": "0.2.0",
+  "type": "library",
+  "unity": "2018.1",
+  "description": "LibrarIoh.IO (https://github.com/SorceressSpell/LibrarIoh.IO)\n\nIO utilities for LibrarIoh.",
+  "dependencies": {
+  },
+  "author": {
+    "name": "Sorceress' Spell",
+    "email": "Sorceress.Spell@gmail.com",
+    "url": "http://SorceressSpell.com"
+  },
+  "keywords": [
+    "librarioh",
+    "io"
+  ]
+}
