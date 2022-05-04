@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace LibrarIoh.IO
+namespace SorceressSpell.LibrarIoh.IO
 {
     /// <summary>
     /// A class that houses some common path operations.
