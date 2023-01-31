@@ -4,11 +4,11 @@
   "version": "0.2.0",
   "type": "library",
   "unity": "2018.1",
-  "description": "LibrarIoh.IO (https://github.com/SorceressSpell/LibrarIoh.IO)\n\nIO utilities for LibrarIoh.",
+  "description": "LibrarIoh.IO (https://github.com/SorceryStory/LibrarIoh.IO)\n\nIO utilities for LibrarIoh.",
   "dependencies": {
   },
   "author": {
-    "name": "Sorceress' Spell",
+    "name": "Joana Almeida",
     "email": "Sorceress.Spell@gmail.com",
     "url": "http://SorceressSpell.com"
   },

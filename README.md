@@ -1,3 +1,3 @@
-# [LibrarIoh.IO](https://github.com/SorceressSpell/LibrarIoh.IO)
+# [LibrarIoh.IO](https://github.com/SorceryStory/LibrarIoh.IO)
 
 IO utilities for LibrarIoh.
