@@ -1,7 +1,7 @@
 {
   "name": "com.sorceressspell.librarioh.io",
   "displayName": "LibrarIoh.IO",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "type": "library",
   "unity": "2018.1",
   "description": "LibrarIoh.IO (https://github.com/SorceryStory/LibrarIoh.IO)\n\nIO utilities for LibrarIoh.",

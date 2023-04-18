@@ -1,18 +1,18 @@
 using NUnit.Framework;
 
-namespace SorceressSpell.LibrarIoh.IO.Tests 
+namespace SorceressSpell.LibrarIoh.IO.Tests
 {
     internal class Placeholder
-{
-    #region Methods
-
-    [Test]
-    public void PlaceholderTest()
     {
-        // Use the Assert class to test conditions.
-        Assert.Pass("This is a placeholder to ensure we have at least one test.");
-    }
+        #region Methods
 
-    #endregion Methods
-}
+        [Test]
+        public void PlaceholderTest()
+        {
+            // Use the Assert class to test conditions.
+            Assert.Pass("This is a placeholder to ensure we have at least one test.");
+        }
+
+        #endregion Methods
+    }
 }

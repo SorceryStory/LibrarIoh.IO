@@ -5,7 +5,7 @@ namespace SorceressSpell.LibrarIoh.IO
     /// <summary>
     /// A class that houses some common path operations.
     /// </summary>
-    public class PathOperations
+    public static class PathOperations
     {
         #region Methods
 
@@ -60,7 +60,7 @@ namespace SorceressSpell.LibrarIoh.IO
         /// <returns>The extension the path ends in or an empty string otherwise.</returns>
         public static string GetExtension(string path)
         {
-            return HasExtension(path, out int extensionInd) ? path.Substring(0, extensionInd) : path;
+            return HasExtension(path, out int extensionInd) ? path[..extensionInd] : path;
         }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace SorceressSpell.LibrarIoh.IO
         {
             string finalPath = removeExtension ? RemoveExtension(path) : path;
             int directoryInd = path.LastIndexOf('/');
-            return directoryInd != -1 ? finalPath.Substring(directoryInd + 1) : finalPath;
+            return directoryInd != -1 ? finalPath[(directoryInd + 1)..] : finalPath;
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace SorceressSpell.LibrarIoh.IO
         /// <returns>The path without the separator at the end.</returns>
         public static string RemoveDirectorySeparatorAtEnd(string path)
         {
-            return (path.LastIndexOf('/') == (path.Length - 1)) ? path.Substring(0, path.Length - 1) : path;
+            return (path.LastIndexOf('/') == (path.Length - 1)) ? path[..^1] : path;
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace SorceressSpell.LibrarIoh.IO
         /// <returns>The path without the separator at the start.</returns>
         public static string RemoveDirectorySeparatorAtStart(string path)
         {
-            return (path.IndexOf('/') == 0) ? path.Substring(1, path.Length - 1) : path;
+            return (path.IndexOf('/') == 0) ? path[1..] : path;
         }
 
         /// <summary>
@@ -103,19 +103,19 @@ namespace SorceressSpell.LibrarIoh.IO
         /// <returns>The path without the extension at the end.</returns>
         public static string RemoveExtension(string path)
         {
-            return HasExtension(path, out int extensionInd) ? path.Substring(0, extensionInd) : path;
+            return HasExtension(path, out int extensionInd) ? path[..extensionInd] : path;
         }
 
         /// <summary>
         /// Remove the last component of a path.
         /// </summary>
         /// <param name="path">The path you want to remove the last component from.</param>
-        /// <param name="removeSeparatorEnd">Remove the trailing separator at the end.</param>
+        /// <param name="removeSeparator">Remove the trailing separator at the end.</param>
         /// <returns>The path without the last component.</returns>
-        public static string RemoveLastComponent(string path, bool removeSeparatorEnd)
+        public static string RemoveLastComponent(string path, bool removeSeparator)
         {
             int directoryInd = path.LastIndexOf('/');
-            return directoryInd != -1 ? path.Substring(0, directoryInd + (removeSeparatorEnd ? 0 : 1)) : path;
+            return directoryInd != -1 ? path[..(directoryInd + (removeSeparator ? 0 : 1))] : path;
         }
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace SorceressSpell.LibrarIoh.IO
         public static bool TryGetExtension(string path, out string extension)
         {
             bool hasExtension = HasExtension(path, out int extensionInd);
-            extension = hasExtension ? path.Substring(extensionInd + 1) : "";
+            extension = hasExtension ? path[(extensionInd + 1)..] : "";
             return hasExtension;
         }
 
